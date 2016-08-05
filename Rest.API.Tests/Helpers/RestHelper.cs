@@ -12,14 +12,6 @@
             return endpoint;
         }
 
-        public string RestGetQuery(string query)
-        {
-            var request = new RestRequest(query, Method.GET);
-            IRestResponse response = endpoint.Execute(request);
-            var content = response.Content; // raw content as string
-            return content;
-        }
-
         public string GetQuery(string query)
         {
             var request = new RestRequest(query, Method.GET);

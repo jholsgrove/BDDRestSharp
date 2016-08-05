@@ -20,13 +20,13 @@
         [When(@"I search for all customers")]
         public void WhenISearchForAllCustomers()
         {
-            queryResult = Rest.RestGetQuery("CUSTOMER/0/");
+            queryResult = Rest.GetQuery("CUSTOMER/0/");
         }
 
         [When(@"I search for customer record (.*)")]
         public void WhenISearchForCustomerRecord(string customerNo)
         {
-            queryResult = Rest.RestGetQuery("CUSTOMER/"+ customerNo +"/");
+            queryResult = Rest.GetQuery("CUSTOMER/" + customerNo + "/");
         }
 
         [Then(@"the result contains customer (.*)")]
@@ -45,7 +45,7 @@
         [When(@"I search for Product (.*)")]
         public void WhenISearchForProduct(int productNo)
         {
-            queryResult = Rest.RestGetQuery("PRODUCT/"+ productNo +"/");
+            queryResult = Rest.GetQuery("PRODUCT/" + productNo + "/");
         }
 
         [Then(@"the price is (.*)")]
